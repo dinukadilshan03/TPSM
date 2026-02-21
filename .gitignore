@@ -8,3 +8,16 @@ wheels/
 
 # Virtual environments
 .venv
+
+
+# Mac
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
