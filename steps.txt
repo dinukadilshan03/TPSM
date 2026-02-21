@@ -1,0 +1,325 @@
+Your assignment (IT3011 – Group Assignment) requires you to justify an analytical statement using:
+
+* Descriptive Analytics
+* Inferential Analytics
+* Predictive Analytics
+
+All grounded in statistical modelling theory 
+
+Since you have a **raw dataset**, here is the complete workflow from beginning to end.
+
+---
+
+# 🔵 PHASE 1 — Understand the Business / Analytical Statement
+
+Before touching the data:
+
+### 1. Clearly Define the Analytical Statement
+
+Example formats:
+
+* “Discount percentage significantly affects sales quantity.”
+* “Customer segment influences average order value.”
+* “Sales can be predicted using pricing and discount variables.”
+
+You must:
+
+* Identify dependent variable (Y)
+* Identify independent variables (X)
+* Decide if it is:
+
+  * Mean comparison problem
+  * Relationship problem
+  * Prediction problem
+  * Time series problem
+
+Without this clarity, analysis will be directionless.
+
+---
+
+# 🔵 PHASE 2 — Data Understanding & Structuring
+
+## Step 1: Inspect Dataset Structure
+
+You should:
+
+* Identify variable types:
+
+  * Continuous (price, quantity, revenue)
+  * Discrete (counts)
+  * Categorical (segment, region)
+  * Time/date variables
+
+Create a table like:
+
+| Variable | Type        | Role        |
+| -------- | ----------- | ----------- |
+| Quantity | Discrete    | Dependent   |
+| Discount | Continuous  | Independent |
+| Segment  | Categorical | Independent |
+
+This aligns with LO1 & LO4 (distribution understanding).
+
+---
+
+## Step 2: Data Cleaning (LO1, LO4 – Apply Level)
+
+You must:
+
+### ✔ Handle Missing Values
+
+* Remove?
+* Impute (mean/median)?
+* Justify choice statistically.
+
+### ✔ Check Outliers
+
+* Boxplot inspection
+* Z-score method
+* IQR method
+
+Justify whether to:
+
+* Keep (realistic extreme values)
+* Remove (data error)
+
+### ✔ Fix Data Types
+
+* Convert date column to datetime
+* Convert categorical variables properly
+
+### ✔ Remove Duplicates
+
+Document every decision.
+
+---
+
+# 🔵 PHASE 3 — Descriptive Analytics (Mandatory)
+
+This answers: “What is happening in the data?”
+
+You must compute:
+
+### 1. Summary Statistics
+
+For numerical variables:
+
+* Mean
+* Median
+* Variance
+* Standard deviation
+* Skewness
+
+Explain distribution shape.
+
+### 2. Distribution Analysis (LO1)
+
+Check:
+
+* Is it Normal?
+* Right-skewed?
+* Left-skewed?
+
+You may:
+
+* Plot histogram
+* Use normality tests (Shapiro, KS test)
+
+### 3. Group Comparisons (Descriptive Only)
+
+Example:
+
+* Average sales by segment
+* Average quantity by region
+
+No hypothesis testing yet — just describe patterns.
+
+---
+
+# 🔵 PHASE 4 — Inferential Analytics (LO2, LO3, LO4)
+
+Now you statistically validate the statement.
+
+This is where many groups lose marks.
+
+---
+
+## Step 1: Formulate Hypotheses
+
+Example:
+
+H0: Discount has no effect on quantity
+H1: Discount significantly affects quantity
+
+You must:
+
+* Define null hypothesis clearly
+* Define alternative hypothesis clearly
+* Set significance level (usually 0.05)
+
+---
+
+## Step 2: Choose Correct Test
+
+Based on your variable types:
+
+| Scenario                             | Test        |
+| ------------------------------------ | ----------- |
+| Compare 2 means                      | t-test      |
+| Compare >2 means                     | ANOVA       |
+| Relationship (continuous-continuous) | Correlation |
+| Categorical association              | Chi-square  |
+| Impact analysis                      | Regression  |
+
+You must justify why the test is valid:
+
+* Assumptions checked?
+
+  * Normality
+  * Independence
+  * Equal variance
+
+---
+
+## Step 3: Regression Modelling (LO3)
+
+If your statement involves impact or prediction:
+
+### Linear Regression
+
+Model form:
+Y = β0 + β1X1 + β2X2 + ε
+
+Interpret:
+
+* Coefficient meaning
+* p-values
+* R²
+* Adjusted R²
+* F-test
+
+Explain statistically:
+
+* Is model significant?
+* Is predictor significant?
+
+Check assumptions:
+
+* Linearity
+* Homoscedasticity
+* Normal residuals
+* No multicollinearity
+
+---
+
+# 🔵 PHASE 5 — Predictive Modelling (LO3, LO5)
+
+Now move from explanation to prediction.
+
+You must:
+
+### 1. Split Data
+
+* Train set
+* Test set
+
+### 2. Fit Model on Training Data
+
+### 3. Evaluate on Test Data
+
+Use:
+
+* RMSE
+* MAE
+* R²
+
+Explain:
+
+* Is model generalizing well?
+* Is there overfitting?
+
+If dataset includes time variable:
+
+* Consider time series modelling (LO5)
+
+---
+
+# 🔵 PHASE 6 — Interpretation & Justification (LO2, LO6 – Evaluate Level)
+
+This is critical.
+
+You must:
+
+* Accept or reject hypothesis
+* Interpret statistical meaning (not business guesswork)
+* Justify statement validity
+* Discuss limitations:
+
+  * Sample size
+  * Bias
+  * Missing variables
+
+This is where viva questions will focus.
+
+---
+
+# 🔵 PHASE 7 — Prepare for Progress Review
+
+You will be assessed 30% on progress 
+
+At that stage, you must show:
+
+* Clean dataset
+* Descriptive statistics
+* Chosen model structure
+* Hypothesis formulation
+* Justification of methods
+
+---
+
+# 🔵 PHASE 8 — Final Presentation
+
+For 70% component :
+
+Your presentation must logically flow:
+
+1. Problem Statement
+2. Dataset Description
+3. Data Cleaning Decisions
+4. Descriptive Findings
+5. Inferential Analysis
+6. Predictive Model
+7. Conclusion
+8. Limitations
+
+No random charts. Everything must connect to the statement.
+
+---
+
+# 🔴 Common Mistakes You Must Avoid
+
+* Doing ML without statistical justification
+* Ignoring assumptions
+* Reporting p-values without interpretation
+* Overfitting with too many predictors
+* Confusing correlation with causation
+* Not aligning to LO1–LO6
+
+---
+
+# 🔵 What You Should Do Now
+
+Step 1:
+Tell me:
+
+* Your analytical statement
+* Dataset column list
+
+Then I will:
+
+* Design your exact statistical roadmap
+* Identify correct tests
+* Suggest model structure
+* Predict viva questions you will get
+
+We will build this strategically.
