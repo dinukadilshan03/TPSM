@@ -1,0 +1,13 @@
+- for mid : reason for selecting topic, number of features, data distribution information about the dataset, what are our hypothesis statements
+- Data Collection & Cleaning (LO1, LO4)
+- Early Statistical Analysis (LO2, LO3, LO4)
+- What exactly is your analytical statement?
+- Is it testable statistically?
+- What type of variables are involved? (categorical / numerical / time series)
+- What is your dependent variable?
+- What are your independent variables?
+- Why did you choose this statement?
+- Response variable (Y)
+- Predictor variables (X)
+
+

@@ -1,0 +1,15 @@
+topic : Positive audience reactions improve content popularity
+
+link: https://www.kaggle.com/datasets/aliiihussain/social-media-viral-content-and-engagement-metrics
+
+reason for selecting the topic:
+    because it is highly relevant in today’s digital and social media-driven world, where content popularity directly influences 
+    marketing success, brand visibility, and revenue generation.
+
+    You can test if the algorithm is "biased" toward positive sentiment over controversial (negative) sentiment
+
+
+Null Hypothesis (H₀): Positive audience reactions have no significant effect on views.
+
+Alternative Hypothesis (H₁): Positive audience reactions have a significant positive effect on views.
+
