@@ -13,4 +13,8 @@ Null Hypothesis (H₀): Positive audience reactions have no significant effect o
 
 Alternative Hypothesis (H₁): Positive audience reactions have a significant positive effect on views.
 
-data distribution
+distribution
+
+plan to test the hypothesis
+
+tech stack : python 
