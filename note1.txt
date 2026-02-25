@@ -23,28 +23,7 @@ tech stack : python
 plan next:
 Inferential Analytics (Hypothesis Testing) :
     using multiple regression model
-
     asks about h0 and h1
-
-    if ask how  we do it
-1️⃣ State hypotheses
-2️⃣ Choose significance level (α = 0.05)
-3️⃣ Calculate test statistic
-4️⃣ Obtain p-value
-5️⃣ Compare p with α
-6️⃣ Make decision
-
-techniques:
-1️⃣ Pearson Correlation Test
-(Used for Continuous vs Continuous)
-Example: Likes vs Views
-
-2️⃣ ANOVA Test
-
-(Used for Categorical vs Continuous)
-Example: Sentiment Category vs Views
-
-
 
 Predictive Analytics:
     modelling
