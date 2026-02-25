@@ -18,3 +18,15 @@ distribution
 plan to test the hypothesis
 
 tech stack : python 
+
+assumptions: 
+Predictors should not be perfectly correlated.(x values should not be perfectly correlated with each other)
+Observations must be independent.(one posts views shouldnt effect other post views)
+The relationship between predictors and Y is linear.(since we want to use mulitple regression)
+
+plan next:
+Inferential Analytics (Hypothesis Testing) :
+    using multiple regression model
+
+Predictive Analytics:
+    modelling
