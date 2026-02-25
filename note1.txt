@@ -19,14 +19,60 @@ plan to test the hypothesis
 
 tech stack : python 
 
-assumptions: 
-Predictors should not be perfectly correlated.(x values should not be perfectly correlated with each other)
-Observations must be independent.(one posts views shouldnt effect other post views)
-The relationship between predictors and Y is linear.(since we want to use mulitple regression)
 
 plan next:
 Inferential Analytics (Hypothesis Testing) :
     using multiple regression model
 
+    asks about h0 and h1
+
+    if ask how  we do it
+1️⃣ State hypotheses
+2️⃣ Choose significance level (α = 0.05)
+3️⃣ Calculate test statistic
+4️⃣ Obtain p-value
+5️⃣ Compare p with α
+6️⃣ Make decision
+
+techniques:
+1️⃣ Pearson Correlation Test
+(Used for Continuous vs Continuous)
+Example: Likes vs Views
+
+2️⃣ ANOVA Test
+
+(Used for Categorical vs Continuous)
+Example: Sentiment Category vs Views
+
+
+
 Predictive Analytics:
     modelling
+
+ASks about the assumptions: 
+Predictors should not be perfectly correlated.(x values should not be perfectly correlated with each other)
+Observations must be independent.(one posts views shouldnt effect other post views)
+The relationship between predictors and Y is linear.(since we want to use mulitple regression)
+
+===========================================================================================================
+1. Independence of Observations
+    Each row in the dataset represents a separate social media post.
+    We assume that the views and engagement metrics of one post do not directly affect another post. Therefore, observations are considered independent.
+
+2. No Perfect Multicollinearity
+    Correlation analysis between engagement variables showed no perfect correlation (r ≠ 1).
+    Therefore, predictors are not perfectly dependent on each other.
+
+3. Continuous Dependent Variable
+    The dependent variable (views) is numerical and continuous.
+    Since views are measured in numbers (millions), they are suitable for correlation, ANOVA, and regression analysis.
+===========================================================================================================
+
+
+
+
+TO DISCUSS: why select the secondary dataset(data source), dataset variable types, dependent independent variable types
+Techniques used for descriptive analysis
+[link to answer](note1.md)
+data source(secondary) - where we took it, whose done it
+

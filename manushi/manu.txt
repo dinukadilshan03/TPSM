@@ -1,17 +1,138 @@
-Before EDA:
+FINAL ANALYSIS SUMMARY
+----------------------
 
-Clean structure
-Fix types
-Remove duplicates
-Handle missing
+Research Question:
+Do positive audience reactions improve content popularity?
 
-After EDA:
+Dataset Overview:
+- 2000 observations
+- No missing values
+- Continuous variables: views, likes, shares, comments, engagement_rate, sentiment_score
+- Categorical variable: sentiment_category
 
-Decide transformations
-Define Y and X
-Run regression
-Test hypothesis
-Check assumptions
-Build predictive model
-Interpret results
+Data Quality:
+- No imputation required
+- No rows removed
+- Full sample size retained (n = 2000)
+- Statistical power preserved
 
+Distribution Findings:
+- Views distribution approximately symmetric (skew ≈ -0.066)
+- Some high-value outliers (viral posts)
+- Wide dispersion in views and likes
+- Sentiment distribution relatively symmetric
+
+Platform Analysis:
+- Mean views across platforms are very similar (~4.2M–4.36M)
+- ANOVA for platform vs views:
+  - p-value ≈ 0.93
+  - No statistically significant difference
+- Platform does not significantly affect views
+
+Sentiment Analysis (Categorical):
+- Mean views:
+  - Negative ≈ 4.20M
+  - Positive ≈ 4.36M
+- ANOVA p-value ≈ 0.26
+- Since p > 0.05 → Fail to reject H0
+- Conclusion: Sentiment polarity does NOT significantly affect views
+
+Engagement Analysis (Continuous):
+
+Correlation Results:
+- views & likes → r ≈ 0.77 (Strong positive relationship)
+- views & shares → ≈ 0
+- views & comments → ≈ 0
+- views & sentiment_score → ≈ 0
+
+Scatter Plot Findings:
+- Likes vs views → clear strong linear upward relationship
+- Shares/comments vs views → no clear pattern
+
+Predictor Strength Ranking:
+1. likes → Strong predictor
+2. sentiment → Very weak
+3. shares → No meaningful effect
+4. comments → No meaningful effect
+
+Key Insight:
+The phrase “positive audience reactions” must be clearly defined.
+
+If defined as:
+- Sentiment → Not significant
+- Likes (engagement) → Strongly associated with views
+
+Important Limitation:
+The dataset shows association, not causation.
+- High views may generate likes (reverse causality)
+- Other hidden variables may influence both
+
+Final Conclusion:
+Content popularity (views) is strongly associated with likes, 
+but not significantly associated with shares, comments, sentiment polarity, or platform.
+
+Therefore:
+The hypothesis is partially supported.
+Likes are strongly related to popularity, but sentiment does not significantly influence views.
+
+This conclusion is statistically valid and methodologically sound.
+
+
+🔥 Important 
+
+Descriptive correlation = just showing r
+Inferential correlation = calculating p-value and making decision
+
+Same for ANOVA:
+
+Descriptive = compare means
+Inferential = compute F-statistic + p-value
+
+
+
+==========================================================================================================================================
+
+CORRELATION ANALYSIS
+
+Correlation analysis was conducted to examine the relationship between engagement metrics and content popularity (views).
+
+Descriptive Correlation Analysis
+
+Descriptive correlation was performed by computing the Pearson correlation coefficient using the correlation matrix. This was done using:
+
+df.corr()
+
+The Pearson correlation coefficient is defined as:
+
+r=Cov(X,Y)/(σXσY)
+
+Where:
+
+Cov(X,Y) is the covariance between variables
+
+σX and σY are the standard deviations of the variables
+
+This step was used to measure the strength and direction of linear relationships between continuous variables such as views, likes, shares, comments, engagement_rate, and sentiment_score.
+
+At this stage, the analysis was purely descriptive, as it only reported the correlation values without testing statistical significance.
+
+Inferential Correlation Analysis
+
+To determine whether the observed correlation was statistically significant at the population level, Pearson’s correlation test was performed using:
+
+scipy.stats.pearsonr()
+
+The following hypotheses were tested:
+
+H0: There is no linear relationship between the variables (ρ = 0).
+H1: There is a significant linear relationship between the variables (ρ ≠ 0).
+
+The p-value obtained from the test was compared against a significance level of 0.05.
+
+Decision Rule:
+If p < 0.05 → Reject H0
+If p ≥ 0.05 → Fail to reject H0
+
+If the p-value was less than 0.05, the relationship was considered statistically significant.
+
+In summary, descriptive correlation was used to explore relationship strength, while inferential correlation testing was used to determine whether the relationship was statistically significant.
