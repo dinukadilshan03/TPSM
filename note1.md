@@ -1,4 +1,4 @@
-# Methodology Summary
+# HOW TO DO DESCRIPTIVE ANALYSIS
 
 ## 1. Data Structure Examination
 
@@ -13,7 +13,6 @@ The following functions were used:
 
 This step ensured data quality and confirmed that all 2000 observations were complete, unique, and suitable for statistical analysis.
 
----
 
 ## 2. Measures of Central Tendency and Dispersion
 
@@ -31,7 +30,6 @@ Var(X) = Σ (Xi − μ)² / (n − 1)
 
 These statistics helped assess variability in content popularity and engagement metrics, particularly identifying high dispersion due to viral posts.
 
----
 
 ## 3. Distribution Analysis
 
@@ -43,7 +41,6 @@ To understand the shape and spread of numerical variables, several visualization
 
 This analysis helped determine whether variables were normally distributed or skewed, and whether extreme values influenced overall dispersion.
 
----
 
 ## 4. Z-Score Standardization
 
@@ -58,7 +55,6 @@ This transformation standardized all numerical variables to:
 
 Standardization enabled fair comparison of variability across engagement metrics and improved visualization clarity.
 
----
 
 ## 5. Correlation Analysis (Continuous Variables)
 
@@ -74,7 +70,6 @@ Correlation strength was visualized using a heatmap and scatter plots.
 
 This analysis identified which engagement metrics had the strongest association with content popularity.
 
----
 
 ## 6. Scatter Plot Analysis
 
@@ -90,7 +85,6 @@ These plots visually confirmed:
 - Strength and direction of association
 - Presence of clusters or outliers
 
----
 
 ## 7. Group-Based Descriptive Comparison (Categorical Variables)
 
