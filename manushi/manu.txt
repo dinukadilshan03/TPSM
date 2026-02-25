@@ -1,0 +1,17 @@
+Before EDA:
+
+Clean structure
+Fix types
+Remove duplicates
+Handle missing
+
+After EDA:
+
+Decide transformations
+Define Y and X
+Run regression
+Test hypothesis
+Check assumptions
+Build predictive model
+Interpret results
+
